@@ -10,7 +10,11 @@ https://kdp-99114.github.io/Fullstack-Practical/
 Below are the topics of the practicals :
 
 Practical-1 : A Web page including HTML basic skeleton using Offline HTML Editor and Online Sandbox Environment
+
 Practical-2 : Live Web-Page on GitHub
+
 Practical-3 : A web page showing a basic html structure using character Entities and span Tag
+
 Practical-4 : A website having list of all practical and their individual practical Page links
+
 Practical-5 : A Web-Page showing the use of Image-Map in the Web Application
