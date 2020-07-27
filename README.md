@@ -2,7 +2,7 @@
 This repository will contain the solution of the practicals assigned in FullStack subject.
 
 # Live Practical Record
-Basically, in this a live website is developed using GitHub pages to store the practicals that are done in the Full-Stack course.
+This is a live website that has been developed and published live using GitHub pages. It stores the practicals that are done in the Full-Stack course.
 Below is the link of the website.
 
 https://kdp-99114.github.io/Fullstack-Practical/
