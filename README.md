@@ -18,3 +18,5 @@ Practical-3 : A web page showing a basic html structure using character Entities
 Practical-4 : A website having list of all practical and their individual practical Page links
 
 Practical-5 : A Web-Page showing the use of Image-Map in the Web Application
+
+Practical-6: Create a Card Layout using CSS layout properties
