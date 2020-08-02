@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(201, 201, 201);
+}
+p{
+    background-color: grey;
+    color: white;
+    text-align : justify;
+    padding: 10px;
+}
