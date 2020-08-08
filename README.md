@@ -20,3 +20,5 @@ Practical-4 : A website having list of all practical and their individual practi
 Practical-5 : A Web-Page showing the use of Image-Map in the Web Application
 
 Practical-6: Create a Card Layout using CSS layout properties
+
+Practical-7: Create a Web Page Layout using div tags
