@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-9</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-padding-top: 70px;
+            scroll-behavior: smooth;
+        }
+
+        #container {
+            max-width: 1200px;
+            margin: 0px auto;
+        }
+
+        /* ----------------- Header-Section -------------------------*/
+        #header {
+            width: 100%;
+            height: 70px;
+            max-width: 1200px;
+            background-color: grey;
+            padding: 0px 20px;
+            position: fixed;
+            top: 0;
+        }
+
+        #header #menu {
+            list-style: none;
+            float: right;
+        }
+
+        #menu li {
+            display: inline-block;
+            line-height: 70px;
+        }
+
+        #menu li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding: 0px 20px;
+            transition: 0.4s;
+        }
+
+        #menu li a:hover, .show-btn:hover, .hide-btn:hover {
+            color: skyblue;
+        }
+
+        .show-btn, .hide-btn {
+            line-height: 70px;
+            color: white;
+            font-size: 30px;
+            transition: 0.4s;
+            display: none;
+        }
+
+        .show-btn {
+            float: right;
+        }
+
+        #chk {
+            position: absolute;
+            visibility: hidden;
+            z-index: -10;
+        }
+
+        /* ----------------- Banner-Section -------------------------*/
+        
+        #banner {
+            margin-top: 90px;
+            width: 100%;
+            height: 700px;
+            background-image: url(../images/emile-perron-xrVDYZRGdw4-unsplash.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #banner h1 {
+            text-transform: uppercase;
+            color: white;
+            padding: 20px;
+            font-size: 40px;
+        }
+
+        /* ----------------- Team-Section -------------------------*/
+        
+        #team {
+            margin-top: 60px;
+        }
+        
+        #team-heading {
+            margin-bottom: 60px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        #team .circle {
+            width: 250px;
+            height: 250px;
+            float: left;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            margin-left: 40px;
+        }
+
+        #member1 {
+            background-image: url(../images/1.png);
+        }
+        #member2 {
+            background-image: url(../images/2.png);
+        }
+        #member3 {
+            background-image: url(../images/3.png);
+        }
+        #member4 {
+            background-image: url(../images/9.png);
+        }
+
+        #team::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ----------------- About-Section -------------------------*/
+        
+        #about {
+            margin-top: 60px;
+        }
+
+        #about-heading {
+            margin-bottom: 60px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        #about #left-sidebar {
+            width: 48%;
+            height: 540px;
+            background-color: grey;
+            float: left;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        #left-sidebar h1 {
+            color: white;
+        }
+
+        #left-sidebar p {
+            color: white;
+            text-align: justify;
+        }
+
+        #about #right-sidebar {
+            width: 48%;
+            height: 540px;
+            float: right;
+            overflow: hidden;
+        }
+
+        .project {
+            width: 100%;
+            height: 160px;
+            background-size: cover;
+        }
+
+        .project h1 {
+            text-align: center;
+        }
+
+        #project-1 {
+            background-image: url(../images/p1.jpg);
+            margin-bottom: 30px;
+        }
+
+        #project-2 {
+            background-image: url(../images/p2.jpeg);
+            margin-bottom: 30px;
+        }
+
+        #project-3 {
+            background-image: url(../images/p3.jpg);
+        }
+
+        #about::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ----------------- technology-Section -------------------------*/
+        
+        #technology {
+            margin-top: 60px;
+        }
+        
+        #technology-heading {
+            margin-bottom: 60px;
+            text-align: center;
+            font-size: 40px;
+        }
+        
+        .card {
+            width: 21%;
+            margin-left: 40px;
+            background-color: lightgrey;
+            float: left;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+        }
+
+        .card h4 {
+            text-align: center;
+            color: black;
+            padding-top: 15px;
+        }
+
+        .card p {
+            text-align: justify;
+            padding: 15px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .button {
+            text-align: center;
+            background-color: red;
+            border-radius: 0.5em;
+        }
+
+        .button a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border-radius: 0.5em;
+        }
+
+        .button a:hover {
+            background-color: blue;
+        }
+
+        #technology::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ----------------- footer-Section -------------------------*/
+
+        #footer {
+            margin-top: 60px;
+        }
+        
+        #footer-heading {
+            margin-bottom: 60px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        #footer #contact{
+            width: 100%;
+            background-color: palevioletred;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #footer p {
+            text-align: center;            
+        }
+
+        @media (min-width: 801px) and (max-width: 1180px) {
+            html {
+                scroll-padding-top: 70px;
+                scroll-behavior: smooth;
+            }
+
+            #container {
+                max-width: 1200px;
+                margin: 0px auto;
+            }
+
+        /* ----------------- Header-Section -------------------------*/
+            #header {
+                width: 100%;
+                height: 70px;
+                max-width: 1200px;
+                background-color: grey;
+                padding: 0px 20px;
+                position: fixed;
+                top: 0;
+            }
+
+            #header #menu {
+                list-style: none;
+                float: right;
+            }
+
+            #menu li {
+                display: inline-block;
+                line-height: 70px;
+            }
+
+            #menu li a {
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+                text-transform: uppercase;
+                padding: 0px 20px;
+                transition: 0.4s;
+            }
+
+            #menu li a:hover, .show-btn:hover, .hide-btn:hover {
+                color: skyblue;
+            }
+
+            .show-btn, .hide-btn {
+                line-height: 70px;
+                color: white;
+                font-size: 30px;
+                transition: 0.4s;
+                display: none;
+            }
+
+            .show-btn {
+                float: right;
+            }
+
+            #chk {
+                position: absolute;
+                visibility: hidden;
+                z-index: -10;
+            }
+
+        /* ----------------- Banner-Section -------------------------*/
+        
+            #banner {
+                margin-top: 90px;
+                width: 100%;
+                height: 600px;
+                background-image: url(../images/emile-perron-xrVDYZRGdw4-unsplash.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            #banner h1 {
+                text-transform: uppercase;
+                color: white;
+                padding: 20px;
+                font-size: 40px;
+            }
+
+        /* ----------------- Team-Section -------------------------*/
+        
+            #team {
+                margin-top: 60px;
+            }
+        
+            #team-heading {
+                margin-bottom: 60px;
+                text-align: center;
+                font-size: 40px;
+            }
+
+            #team .circle {
+                width: 250px;
+                height: 250px;
+                float: left;
+                border-radius: 50%;
+                background-size: cover;
+                background-position: center;
+                margin-left: 145px;
+                margin-bottom: 20px;
+            }
+
+            #member1 {
+                background-image: url(../images/1.png);
+            }
+            #member2 {
+                background-image: url(../images/2.png);
+            }
+            #member3 {
+                background-image: url(../images/3.png);
+            }
+            #member4 {
+                background-image: url(../images/9.png);
+            }
+
+            #team::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+        /* ----------------- About-Section -------------------------*/
+        
+            #about {
+                margin-top: 60px;
+            }
+
+            #about-heading {
+                margin-bottom: 60px;
+                text-align: center;
+                font-size: 40px;
+            }
+
+            #about #left-sidebar {
+                width: 48%;
+                height: 540px;
+                background-color: grey;
+                float: left;
+                padding: 20px;
+                overflow: hidden;
+            }
+
+            #left-sidebar h1 {
+                color: white;
+            }
+
+            #left-sidebar p {
+                color: white;
+                text-align: justify;
+            }
+
+            #about #right-sidebar {
+                width: 48%;
+                height: 540px;
+                float: right;
+                overflow: hidden;
+            }
+
+            .project {
+                width: 100%;
+                height: 160px;
+                background-size: cover;
+            }
+
+            .project h1 {
+                text-align: center;
+            }
+
+            #project-1 {
+                background-image: url(../images/p1.jpg);
+                margin-bottom: 30px;
+            }
+
+            #project-2 {
+                background-image: url(../images/p2.jpeg);
+                margin-bottom: 30px;
+            }
+
+            #project-3 {
+                background-image: url(../images/p3.jpg);
+            }
+
+            #about::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+        /* ----------------- technology-Section -------------------------*/
+        
+            #technology {
+                margin-top: 60px;
+            }
+        
+            #technology-heading {
+                margin-bottom: 60px;
+                text-align: center;
+                font-size: 40px;
+            }
+        
+            .card {
+                width: 30%;
+                margin-left: 100px;
+                padding: 15px;
+                background-color: lightgrey;
+                float: left;
+                margin-bottom: 20px;
+            }
+
+            .card img {
+                width: 100%;
+                height: 180px;
+            }
+
+            .card h4 {
+                text-align: center;
+                color: black;
+                padding-top: 15px;
+            }
+
+            .card p {
+                text-align: justify;
+                padding: 15px;
+                color: white;
+                font-size: 20px;
+            }
+
+            .button {
+                text-align: center;
+                background-color: red;
+                border-radius: 0.5em;
+            }
+
+            .button a {
+                display: inline-block;
+                text-decoration: none;
+                color: white;
+                padding: 10px;
+                width: 100%;
+                border-radius: 0.5em;
+            }
+
+            .button a:hover {
+                background-color: blue;
+            }
+
+            #technology::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+        /* ----------------- footer-Section -------------------------*/
+
+            #footer {
+                margin-top: 60px;
+            }
+        
+            #footer-heading {
+                margin-bottom: 60px;
+                text-align: center;
+                font-size: 40px;
+            }
+
+            #footer #contact{
+                width: 100%;
+                background-color: palevioletred;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #footer p {
+                text-align: center;            
+            }
+        }
+
+        @media (min-width: 626px) and (max-width: 800px) {
+            html {
+                scroll-padding-top: 70px;
+                scroll-behavior: smooth;
+            }
+
+            #container {
+                max-width: 1200px;
+                margin: 0px auto;
+            }
+
+        /* ----------------- Header-Section -------------------------*/
+            .show-btn, .hide-btn {
+                display: block;
+            }
+
+            #menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background-color: #333;
+                text-align: center;
+                padding: 80px 0px;
+                transition: .7s;
+                line-height: normal;
+            }
+
+            #chk:checked ~ #menu {
+                right: 0;
+            }
+
+            #menu li {
+                display: block;
+                padding: 0px 20px;
+            }
+
+            #menu li a {
+                display: block;
+            }
+
+            .hide-btn {
+                position: absolute;
+                right: 20px;
+                top: 10px;
+            }
+
+        /* ----------------- Banner-Section -------------------------*/
+        #banner {
+            margin-top: 90px;
+            width: 100%;
+            height: 500px;
+            background-image: url(../images/emile-perron-xrVDYZRGdw4-unsplash.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #banner h1 {
+            text-transform: uppercase;
+            color: white;
+            padding: 20px;
+            font-size: 40px;
+        }
+
+        /* ----------------- Team-Section -------------------------*/
+        
+        #team {
+            margin-top: 60px;
+        }
+        
+        #team-heading {
+            margin-bottom: 60px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        #team .circle {
+            width: 250px;
+            height: 250px;
+            float: left;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            margin-left: 40px;
+            margin-bottom: 20px;
+        }
+
+        #member1 {
+            background-image: url(../images/1.png);
+        }
+        #member2 {
+            background-image: url(../images/2.png);
+        }
+        #member3 {
+            background-image: url(../images/3.png);
+        }
+        #member4 {
+            background-image: url(../images/9.png);
+        }
+
+        #team::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ----------------- About-Section -------------------------*/
+        
+        #about {
+            margin-top: 60px;
+        }
+
+        #about-heading {
+            margin-bottom: 60px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        #about #left-sidebar {
+            width: 100%;
+            height: 375px;
+            background-color: grey;
+            padding: 20px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        #left-sidebar h1 {
+            color: white;
+        }
+
+        #left-sidebar p {
+            color: white;
+            text-align: justify;
+        }
+
+        #about #right-sidebar {
+            width: 100%;
+            height: 540px;
+            overflow: hidden;
+        }
+
+        .project {
+            width: 100%;
+            height: 160px;
+            background-size: cover;
+        }
+
+        .project h1 {
+            text-align: center;
+        }
+
+        #project-1 {
+            background-image: url(../images/p1.jpg);
+            margin-bottom: 30px;
+        }
+
+        #project-2 {
+            background-image: url(../images/p2.jpeg);
+            margin-bottom: 30px;
+        }
+
+        #project-3 {
+            background-image: url(../images/p3.jpg);
+        }
+
+        #about::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ----------------- technology-Section -------------------------*/
+        
+        #technology {
+            margin-top: 60px;
+        }
+        
+        #technology-heading {
+            margin-bottom: 60px;
+            text-align: center;
+            font-size: 40px;
+        }
+        
+        .card {
+            width: 90%;
+            /* margin-left: 40px; */
+            background-color: lightgrey;
+            float: left;
+            margin-left: 150px;
+            
+            max-width: 400px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+        }
+
+        .card h4 {
+            text-align: center;
+            color: black;
+            padding-top: 15px;
+        }
+
+        .card p {
+            text-align: justify;
+            padding: 15px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .button {
+            text-align: center;
+            background-color: red;
+            border-radius: 0.5em;
+        }
+
+        .button a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border-radius: 0.5em;
+        }
+
+        .button a:hover {
+            background-color: blue;
+        }
+
+        #technology::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ----------------- footer-Section -------------------------*/
+
+        #footer {
+            margin-top: 60px;
+        }
+        
+        #footer-heading {
+            margin-bottom: 60px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        #footer #contact{
+            width: 100%;
+            background-color: palevioletred;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #footer p {
+            text-align: center;            
+        }
+            
+        }
+
+        @media (max-width: 625px) {
+            
+            html {
+                scroll-padding-top: 70px;
+                scroll-behavior: smooth;
+            }
+            
+            #container {
+                min-width: 320px;
+            }
+
+        /* ----------------- Header-Section -------------------------*/
+            .show-btn, .hide-btn {
+                display: block;
+            }
+
+            #menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background-color: #333;
+                text-align: center;
+                padding: 80px 0px;
+                transition: .7s;
+                line-height: normal;
+            }
+
+            #chk:checked ~ #menu {
+                right: 0;
+            }
+
+            #menu li {
+                display: block;
+                padding: 0px 20px;
+            }
+
+            #menu li a {
+                display: block;
+            }
+
+            .hide-btn {
+                position: absolute;
+                right: 20px;
+                top: 10px;
+            }
+
+        /* ----------------- Banner-Section -------------------------*/
+        
+        #banner {
+            margin-top: 90px;
+            width: 100%;
+            height: 330px;
+            background-image: url(../images/emile-perron-xrVDYZRGdw4-unsplash.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #banner h1 {
+            text-transform: uppercase;
+            color: white;
+            padding: 10px;
+            font-size: 40px;
+        }
+
+        /* ----------------- Team-Section -------------------------*/
+        
+        #team {
+            margin-top: 60px;
+        }
+        
+        #team-heading {
+            margin-bottom: 60px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        #team .circle {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+        }
+
+        #member1 {
+            background-image: url(../images/1.png);
+        }
+        #member2 {
+            background-image: url(../images/2.png);
+        }
+        #member3 {
+            background-image: url(../images/3.png);
+        }
+        #member4 {
+            background-image: url(../images/9.png);
+        }
+
+        #team::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ----------------- About-Section -------------------------*/
+        
+        #about {
+            margin-top: 60px;
+        }
+
+        #about-heading {
+            margin-bottom: 60px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        #about #left-sidebar {
+            width: 48%;
+            height: 540px;
+            background-color: grey;
+            float: left;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        #left-sidebar h1 {
+            color: white;
+        }
+
+        #left-sidebar p {
+            color: white;
+            text-align: justify;
+        }
+
+        #about #right-sidebar {
+            width: 48%;
+            height: 540px;
+            float: right;
+            overflow: hidden;
+        }
+
+        .project {
+            width: 100%;
+            height: 160px;
+            background-size: cover;
+        }
+
+        .project h1 {
+            text-align: center;
+        }
+
+        #project-1 {
+            background-image: url(../images/p1.jpg);
+            margin-bottom: 30px;
+        }
+
+        #project-2 {
+            background-image: url(../images/p2.jpeg);
+            margin-bottom: 30px;
+        }
+
+        #project-3 {
+            background-image: url(../images/p3.jpg);
+        }
+
+        #about::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ----------------- technology-Section -------------------------*/
+        
+        #technology {
+            margin-top: 60px;
+        }
+        
+        #technology-heading {
+            margin-bottom: 60px;
+            text-align: center;
+            font-size: 40px;
+        }
+        
+        .card {
+            width: 21%;
+            margin-left: 40px;
+            background-color: lightgrey;
+            float: left;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+        }
+
+        .card h4 {
+            text-align: center;
+            color: black;
+            padding-top: 15px;
+        }
+
+        .card p {
+            text-align: justify;
+            padding: 15px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .button {
+            text-align: center;
+            background-color: red;
+            border-radius: 0.5em;
+        }
+
+        .button a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border-radius: 0.5em;
+        }
+
+        .button a:hover {
+            background-color: blue;
+        }
+
+        #technology::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ----------------- footer-Section -------------------------*/
+
+        #footer {
+            margin-top: 60px;
+        }
+        
+        #footer-heading {
+            margin-bottom: 60px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        #footer #contact{
+            width: 100%;
+            background-color: palevioletred;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #footer p {
+            text-align: center;            
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-btn">
+            <i class="fa fa-bars"></i>
+        </label>
+            <ul id="menu">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#technology">Technologies</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <label for="chk" class="hide-btn">
+                    <i class="fa fa-times"></i>
+                </label>
+            </ul>
+        </div>
+        <div id="banner">
+            <h1>Practical - 9</h1>
+        </div>
+        
+        <div id="team">
+            <h1 id="team-heading">Team Members</h1>
+            <div id="member1" class="circle"></div>
+            <div id="member2" class="circle"></div>
+            <div id="member3" class="circle"></div>
+            <div id="member4" class="circle"></div>
+        </div>
+        <div id="about">
+            <h1 id="about-heading">About Us</h1>
+            <div id="left-sidebar">
+                <h1>About Projects</h1>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, culpa? Hic neque id sint optio pariatur cumque, totam iure ab fuga temporibus dolorem. Ea expedita iste minus maxime tempore quam quidem deserunt illum quas delectus voluptatem eius ducimus excepturi fugit quibusdam recusandae nemo, reprehenderit assumenda mollitia, ad animi obcaecati? Explicabo odit veritatis sed aliquid eligendi laboriosam esse nihil dolores ad veniam, quaerat ipsum corrupti illum placeat quae facere porro quos ipsam saepe odio nulla voluptatibus suscipit! Esse facere aperiam amet voluptatibus mollitia explicabo cum iure minus odit assumenda ut laboriosam rerum illum, fugiat inventore culpa sunt, quia in quam porro. Accusamus dicta inventore aliquam reiciendis deserunt ea! Fugit cupiditate culpa quos dolorem, suscipit consequatur id reiciendis aliquam dicta aspernatur quo. Necessitatibus excepturi voluptatibus, commodi sed optio maxime dicta enim accusantium eius ab. Non unde, doloremque eius, autem error eum nobis, necessitatibus illum eveniet blanditiis sequi minima? Quaerat illo praesentium maxime iure totam consectetur? Quis quisquam eius pariatur voluptate, dignissimos illo quae nihil, necessitatibus asperiores consequuntur in, nobis iste. Facere, aut esse nostrum obcaecati dolores sint facilis dolorum, a deleniti fugiat ducimus, excepturi sit ea hic nisi repellendus earum aspernatur voluptatum adipisci! Reprehenderit adipisci ipsa velit, voluptates voluptatum aperiam iste odio?</p>
+            </div>
+            <div id="right-sidebar">
+                <div id="project-1" class="project">
+                    <h1>Project-1</h1>
+                </div>
+                <div id="project-2" class="project">
+                    <h1>Project-2</h1>
+                </div>
+                <div id="project-3" class="project">
+                    <h1>Project-3</h1>
+                </div>
+            </div>
+        </div>
+        <div id="technology">
+            <h1 id="technology-heading">Technologies Used</h1>
+            <div id="card-1" class="card">
+                <img src="../images/Practical-5-html.png" alt="">
+                <h4>Introduction to HTML</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, commodi. Autem rem eaque culpa molestias!</p>
+                <div class="button">
+                    <a href="Practical-5-html.html" target="_blank">Read More</a>
+                </div>
+            </div>
+        
+            <div id="card-2" class="card">
+                <img src="../images/Practical-5-css.png" alt="">
+                <h4>Introduction to CSS</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, commodi. Autem rem eaque culpa molestias!</p>
+                <div class="button">
+                    <a href="Practical-5-css.html" target="_blank">Read More</a>
+                </div>
+            </div>
+            
+            <div id="card-3" class="card">
+                <img src="../images/Practical-5-js.png" alt="">
+                <h4>Introduction to JavaScript</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, commodi. Autem rem eaque culpa molestias!</p>
+                <div class="button">
+                    <a href="Practical-5-js.html" target="_blank">Read More</a>
+                </div>
+            </div>
+            
+            <div id="card-4" class="card">
+                <img src="../images/Practical-5-boot.jpg" alt="">
+                <h4>Introduction to Bootstrap</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, commodi. Autem rem eaque culpa molestias!</p>
+                <div class="button">
+                    <a href="Practical-5-boot.html" target="_blank">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <h1 id="footer-heading">Contact</h1>
+            <div id="contact">
+                <p>Website Template for Practical-8 © <a href="https://github.com/kdp-99114">kdp-99114</a>
+                    <br><br>
+                    <a href="#">Back to top</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
