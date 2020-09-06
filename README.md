@@ -24,3 +24,7 @@ Practical-6: Create a Card Layout using CSS layout properties
 Practical-7: Create a Web Page Layout using div tags
 
 Practical-8: Create a Web Page having Fixed Navigation Bar with the given content
+
+Practical-9: Create a Responsive Web Layout with Responsive Navigation Bar
+
+Practical-10: Create a Responsive Side-Bar Navigation Menu
