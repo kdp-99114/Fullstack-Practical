@@ -128,3 +128,19 @@
 #chk:checked ~ .content {
     width: 80%;
 }
+
+@media (max-width: 1000px) and (min-width: 701px) {
+    .sidebar {
+        width: 30%;
+        height: 100%;
+        background-color: grey;
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        transition: 0.5s;
+    }
+
+    #chk:checked ~ .content {
+        width: 70%;
+    }
+}
