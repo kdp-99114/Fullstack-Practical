@@ -144,3 +144,34 @@
         width: 70%;
     }
 }
+
+@media (max-width: 700px) {
+    
+    .sidebar {
+        width: 100%;
+        height: 100%;
+        background-color: grey;
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        transition: 0.5s;
+    }
+
+    .header h1 {
+        display: none;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        text-align: center;
+    }
+
+    .content {
+        margin-top: 70px;
+        padding: 15px;
+    }
+
+    #chk:checked ~ .content {
+        width: 100%;
+    }
+}
