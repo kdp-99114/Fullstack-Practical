@@ -28,3 +28,7 @@ Practical-8: Create a Web Page having Fixed Navigation Bar with the given conten
 Practical-9: Create a Responsive Web Layout with Responsive Navigation Bar
 
 Practical-10: Create a Responsive Side-Bar Navigation Menu
+
+Practical-11: Create a Table that represent Live Practical Book Records
+
+Practical-12: Create a Custom Price Table Template
