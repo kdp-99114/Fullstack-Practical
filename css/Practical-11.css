@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    border: 3px solid darkslategrey;
+    border-spacing: 0;
+    border-radius: 0.5em;
+    margin: 40px auto;
+    text-align: justify;
+}
+
+tbody td {
+    border-bottom: 2px solid lightgrey;
+    padding: 10px;
+}
+thead td {
+    border-bottom: 2px solid;
+    padding: 10px;
+}
+
+th {
+    border-bottom: 4px solid lightgrey;
+    padding: 10px;
+}
+
+tbody tr:last-child td {
+    border: 0;
+}
+
+thead tr:first-child {
+    text-align: center;
+    font-weight: bold;
+    background-color: darkslategrey;
+    color: white;
+}
+
+tbody td:last-child {
+    color: darkgrey;
+}
+
+tbody tr:hover {
+    background-color: rgb(242, 242, 242);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(145, 145, 145);
+}
+
+.edit {
+    margin-right: 5px;
+}
+
+.edit:hover {
+    color: blue;
+}
+
+.delete:hover {
+    color: red;
+}
+
+.edit, .delete {
+    position: relative;
+    display: inline-block;
+}
+  
+.edit .tooltip, .delete .tooltip {
+    visibility: hidden;
+    width: 70px;
+    background-color: #fff;
+    color: black;
+    text-align: center;
+    padding: 3px 0;
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: 103%;
+    border: 1px solid;
+    font-size: 15px;
+}
+  
+.edit:hover .tooltip, .delete:hover .tooltip {
+    visibility: visible;
+  }
+
+#checked {
+    color: green;
+}
+
+#unchecked {
+    color: red;
+}
+
+th:nth-child(2), td:nth-child(2) {
+    max-width: 600px;
+}
+
+th:nth-child(4), 
+td:nth-child(4), 
+th:nth-child(5), 
+td:nth-child(5) {
+    padding-left: 60px;
+}
