@@ -32,3 +32,5 @@ Practical-10: Create a Responsive Side-Bar Navigation Menu
 Practical-11: Create a Table that represent Live Practical Book Records
 
 Practical-12: Create a Custom Price Table Template
+
+Practical-13: Create a Responsive Footer Template
