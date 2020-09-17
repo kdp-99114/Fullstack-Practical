@@ -138,11 +138,15 @@ main article li a:hover {
     align-items: center;
 }
 
-.social ul {
+.social {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 40px 0px;
+    padding: 20px;
+}
+
+.social ul {
+    list-style: none;
+    margin: 20px;
 }
 
 .social ul li {
@@ -151,7 +155,7 @@ main article li a:hover {
     height: 60px;
     padding: 20px;
     border-radius: 50%;
-    background-color: #616161;
+    background-color: #424242;
     margin-right: 20px;
 }
 
