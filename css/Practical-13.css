@@ -87,7 +87,7 @@ footer .signup {
 .copyright {
     background-color: black;
     text-align: center;
-    padding: 40px 0px;
+    padding: 30px;
 }
 
 main article li a {
@@ -101,7 +101,7 @@ main article li a:hover {
 
 .copyright a {
     text-decoration: none;
-    color: lightgrey;
+    color: grey;
 }
 
 .copyright a:hover{
