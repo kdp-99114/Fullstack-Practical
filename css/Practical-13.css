@@ -19,42 +19,37 @@ footer main h2 {
 article {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    padding: 30px 10px;
 }
 
 main article .about {
-    width: 45%;
-    float: left;
+    width: 40%;
+}
+
+main article .about p {
     text-align: justify;
+    color: grey;
+    line-height: 24px;
+    margin-top: 10px;
 }
 
-article::after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-main article aside {
-    float: right;
-}
-
-main article aside section {
-    float: left;
-    margin-left: 15px;
-}
-
-main article aside section ul {
+main article section ul {
     list-style: none;
 }
 
-aside::after {
-    content: '';
-    display: block;
-    clear: both;
+main article section ul li {
+    padding: 5px;
 }
 
-article {
-    padding: 40px 15px;
+span {
+    color: grey;
+}
+
+main article section ul li i {
+    color: grey;
+    font-size: 20px;
+    margin-right: 10px;
 }
 
 hr {
@@ -87,12 +82,12 @@ footer .signup {
     padding: 40px 0px;
 }
 
-main article aside li a {
+main article li a {
     text-decoration: none;
-    color: lightgrey;
+    color: grey;
 }
 
-main article aside li a:hover {
+main article li a:hover {
     color: orange;
 }
 
