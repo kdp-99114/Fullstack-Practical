@@ -34,3 +34,5 @@ Practical-11: Create a Table that represent Live Practical Book Records
 Practical-12: Create a Custom Price Table Template
 
 Practical-13: Create a Responsive Footer Template
+
+Practical-14: Create Login Form with different Templates
