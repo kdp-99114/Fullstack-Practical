@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+header h1 {
+    color: red;
+    font-size: 40px;
+}
+
+.form1, .form2, .form3 {
+    width: 400px;
+    height: 450px;
+    background-color: #fff;
+    margin: 100px auto;
+}
+
+.form1 form, .form2 form, .form3 form {
+    padding: 30px;
+}
+
+#email, #password {
+    width: 100%;
+    padding: 12px 0;
+    margin: 8px 0;
+    border-style: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+}
+
+#email:focus, #password:focus {
+    border-bottom: 2px solid #0084ff;
+}
+
+.form1-heading {
+    width: 100%;
+    margin-bottom: 15px;
+    height: 100px;
+    background: linear-gradient(to right, orange, red);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.form1-heading h2 {
+    padding: 10px 0px;
+}
+
+.form1-heading .social i {
+    font-size: 20px;
+    padding: 10px 10px;
+}
+
+.form1 form a {
+    display: block;
+    text-decoration: none;
+    color: grey;
+    text-align: right;
+    padding: 15px 0px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.form1 form #link2 {
+    display: inline-block;
+    margin-left: 45px;
+}
+
+.form1 form input[type='submit'] {
+    outline: none;
+    border-style: none;
+    background-color: grey;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.form2-heading {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    color: rgb(235, 33, 67);
+}
+
+.form2 form p {
+    display: inline-block;
+    color: grey;
+    padding: 15px 0px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.form2 form p b {
+    color: rgb(58, 58, 247);
+}
+
+.form2 form a {
+    text-decoration: none;
+    color: grey;
+    font-size: 14px;
+    margin-left: 25px;
+}
+
+.form2 form a b {
+    color: rgb(58, 58, 247);
+}
+
+.form2 form input[type='submit'] {
+    outline: none;
+    border-style: none;
+    background-color: rgb(235, 33, 67);
+    color: white;
+    padding: 12px 45px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.form2-footer {
+    width: 100%;
+    height: 75px;
+    background-color: rgb(128, 115, 115);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.form2-footer .social i {
+    font-size: 20px;
+    padding: 10px 10px;
+}
+
+.form3-heading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
