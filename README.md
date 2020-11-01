@@ -36,3 +36,5 @@ Practical-12: Create a Custom Price Table Template
 Practical-13: Create a Responsive Footer Template
 
 Practical-14: Create Login Form with different Templates
+
+Practical-15. Create a Counter Page using JavaScript as per the attached Templates
