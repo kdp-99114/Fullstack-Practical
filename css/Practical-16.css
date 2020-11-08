@@ -79,3 +79,12 @@ form button:hover {
 .delete-btn {
     background-color: palevioletred;
 }
+
+.fa-check, .fa-trash {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
