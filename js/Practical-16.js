@@ -7,6 +7,7 @@ var todoList = document.querySelector(".todo-list");
 // Event Handlers
 
 todoButton.onclick = createList;
+todoList.onclick = checkdelete;
 
 // Functions
 
@@ -35,4 +36,18 @@ function createList(e) {
     newDiv.appendChild(deletebtn);
 
     todoList.appendChild(newDiv);
+}
+
+function checkdelete(e) {
+    var item = e.target;
+
+    if(item.classList[0]==="delete-btn") {
+        var parent = item.parentNode;
+        parent.remove();
+    }
+
+    if(item.classList[0]==="check-btn") {
+        var parent = item.parentNode;
+        parent.classList.toggle("completed");
+    }
 }
