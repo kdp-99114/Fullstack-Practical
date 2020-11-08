@@ -40,3 +40,42 @@ form button:hover {
     color: white;
     background-color: skyblue;
 }
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    list-style: none;
+    width: 25%;
+}
+
+.todo {
+    margin: 8px;
+    background-color: #fff;
+    color: black;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-item {
+    flex: 1;
+    margin: 0px 8px;
+}
+
+.check-btn, .delete-btn {
+    background-color: rgb(19, 214, 19);
+    color: white;
+    border: none;
+    outline: none;
+    padding: 16px;
+    font-size: 16px;
+}
+
+.delete-btn {
+    background-color: palevioletred;
+}
