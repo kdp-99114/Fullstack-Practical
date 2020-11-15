@@ -40,3 +40,5 @@ Practical-14: Create Login Form with different Templates
 Practical-15: Create a Counter Page using JavaScript as per the attached Templates
 
 Practical-16: Create a To-do List using JavaScript
+
+Practical-17: Create a Page with Live Clock with Dynamic Greeting Background and Data Stored in Browser Local Storage
