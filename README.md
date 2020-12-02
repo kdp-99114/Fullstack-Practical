@@ -7,6 +7,8 @@ Below is the link of the website.
 
 https://kdp-99114.github.io/Fullstack-Practical/
 
+# List Of Practicals
+
 Below are the topics of the practicals :
 
 Practical-1 : A Web page including HTML basic skeleton using Offline HTML Editor and Online Sandbox Environment
@@ -42,3 +44,5 @@ Practical-15: Create a Counter Page using JavaScript as per the attached Templat
 Practical-16: Create a To-do List using JavaScript
 
 Practical-17: Create a Page with Live Clock with Dynamic Greeting Background and Data Stored in Browser Local Storage
+
+Practical-18: Create an HTML Form and Validate it with Javascript (Client-side Programming Language)
