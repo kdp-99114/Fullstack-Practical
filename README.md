@@ -48,3 +48,5 @@ Practical-17: Create a Page with Live Clock with Dynamic Greeting Background and
 Practical-18: Create an HTML Form and Validate it with Javascript (Client-side Programming Language)
 
 Practical-19: Create an HTML page with Multi-Step Form
+
+Practical-20: Create a Responsive Layout using Bootstrap Grid System
