@@ -7,7 +7,7 @@ Below is the link of the website.
 
 https://kdp-99114.github.io/Fullstack-Practical/
 
-# List Of Practicals
+## List Of Practicals
 
 Below are the topics of the practicals :
 
